@@ -1,0 +1,130 @@
+<html>
+ <head>
+
+  
+  <style type="text/css">
+   #mynetwork {
+    background-color: #232625;
+   }
+
+   body {
+    background-color: #232625;
+    color: #ffffff;
+    font-size: 10px;
+   }
+  </style>
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script>
+
+  
+   var options = {
+      autoResize: true,
+      height: '100%',
+      width: '100%',
+      manipulation: false,
+      height: '90%',
+      layout: {
+        randomSeed: undefined,
+        improvedLayout:true,
+        hierarchical: {
+          enabled:true,
+          levelSeparation: 450,
+          nodeSpacing: 200,
+          treeSpacing: 100,
+          blockShifting: true,
+          edgeMinimization: true,
+          parentCentralization: false,
+          direction: 'LR',        // UD, DU, LR, RL
+          sortMethod: 'directed'   // hubsize, directed
+        }
+      },
+      nodes:{
+        borderWidth: 1,
+        borderWidthSelected: 2,
+        chosen: true,
+        shape: 'box',
+        font: {
+          align: 'left',
+          color: '#FFFFFF',
+        },
+      },
+      edges:{
+        font: {
+          color: '#ffffff',
+          size: 12, // px
+          face: 'arial',
+          background: 'none',
+          strokeWidth: 0, // px
+          strokeColor: '#ffffff',
+          align: 'horizontal',
+          multi: false,
+          vadjust: 0,
+        }
+      },
+
+      physics:{
+        enabled: false,
+      }
+
+  }
+
+
+  var nodes = [
+{id: '1', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'fullLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'truncLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'isExpanded': false},
+{id: '6', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n(click to expand +)', 'fullLabel': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n105 MSTORE\n106 PUSH1 0x20\n108 ADD\n109 SWAP2\n110 POP\n111 POP\n112 PUSH1 0x40\n114 MLOAD\n115 DUP1\n116 SWAP2\n117 SUB\n118 SWAP1\n119 RETURN\n', 'truncLabel': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n(click to expand +)', 'isExpanded': false},
+{id: '5', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n(click to expand +)', 'fullLabel': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n129 POP\n130 DUP4\n131 DUP3\n132 PUSH1 0xff\n134 AND\n135 ADD\n136 SWAP1\n137 POP\n138 DUP1\n139 SWAP3\n140 POP\n141 POP\n142 POP\n143 SWAP2\n144 SWAP1\n145 POP\n146 JUMP\n', 'truncLabel': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n(click to expand +)', 'isExpanded': false},
+{id: '4', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n(click to expand +)', 'fullLabel': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n86 SWAP1\n87 PUSH1 0x20\n89 ADD\n90 SWAP1\n91 SWAP2\n92 SWAP1\n93 POP\n94 POP\n95 PUSH1 0x78\n97 JUMP\n', 'truncLabel': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n(click to expand +)', 'isExpanded': false},
+{id: '7', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'fullLabel': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'truncLabel': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'isExpanded': false},
+{id: '3', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'fullLabel': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'truncLabel': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'isExpanded': false},
+{id: '8', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'fullLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'truncLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'isExpanded': false},
+{id: '2', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n(click to expand +)', 'fullLabel': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n52 AND\n53 DUP1\n54 PUSH4 0x2ebcff99\n59 EQ\n60 PUSH1 0x44\n62 JUMPI\n', 'truncLabel': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n(click to expand +)', 'isExpanded': false},
+{id: '0', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n(click to expand +)', 'fullLabel': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n9 PUSH1 0x3f\n11 JUMPI\n', 'truncLabel': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n(click to expand +)', 'isExpanded': false}
+];
+var edges = [
+{from: '0', to: '1', 'arrows': 'to', 'label': 'Not(ULE(4, calldatasize_SymVars))', 'smooth': {'type': 'cubicBezier'}},
+{from: '5', to: '6', 'arrows': 'to', 'label': '', 'smooth': {'type': 'cubicBezier'}},
+{from: '4', to: '5', 'arrows': 'to', 'label': '', 'smooth': {'type': 'cubicBezier'}},
+{from: '3', to: '4', 'arrows': 'to', 'label': 'callvalue == 0', 'smooth': {'type': 'cubicBezier'}},
+{from: '3', to: '7', 'arrows': 'to', 'label': 'Not(callvalue == 0)', 'smooth': {'type': 'cubicBezier'}},
+{from: '2', to: '3', 'arrows': 'to', 'label': 'Extract(0xff, 0xe0, calldata_SymVars_0) == 0x2ebcff99', 'smooth': {'type': 'cubicBezier'}},
+{from: '2', to: '8', 'arrows': 'to', 'label': 'Not(Extract(0xff, 0xe0, calldata_SymVars_0) == 0x2ebcff99)', 'smooth': {'type': 'cubicBezier'}},
+{from: '0', to: '2', 'arrows': 'to', 'label': 'ULE(4, calldatasize_SymVars)', 'smooth': {'type': 'cubicBezier'}}
+];
+
+  </script>
+ </head>
+<body>
+<p>Mythril / LASER Symbolic VM</p>
+<p><div id="mynetwork"></div><br/></p>
+<script type="text/javascript">
+var container = document.getElementById('mynetwork');
+
+var nodesSet = new vis.DataSet(nodes);
+var edgesSet = new vis.DataSet(edges);
+var data = {'nodes': nodesSet, 'edges': edgesSet}
+
+var gph = new vis.Network(container, data, options);
+gph.on("click", function (params) {
+  // parse node id
+  var nodeID = params['nodes']['0'];
+  if (nodeID) {
+    var clickedNode = nodesSet.get(nodeID);
+
+    if(clickedNode.isExpanded) {
+      clickedNode.label = clickedNode.truncLabel;
+    }
+    else {
+      clickedNode.label = clickedNode.fullLabel;
+    }
+
+    clickedNode.isExpanded = !clickedNode.isExpanded;
+
+    nodesSet.update(clickedNode);
+  }
+});
+</script>
+</body>
+</html>
