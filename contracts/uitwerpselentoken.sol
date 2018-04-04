@@ -1,7 +1,10 @@
 pragma solidity ^0.4.13;
 
-// UitwerpselenToken is a fork of MerdeToken by Doug Hoyte
-// 
+// UitwerpselenToken: The multi-user wallet with a twist!
+// Do NOT use this in production!
+
+// UitwerpselenToken is based on MerdeToken by Doug Hoyte:
+// https://github.com/Arachnid/uscc/tree/master/submissions-2017/doughoyte
 
 contract UitwerpselenToken {
     address public owner;
@@ -24,11 +27,10 @@ contract UitwerpselenToken {
 
     mapping (address => uint) public balanceOf;
     uint public deposited;
-    uint public withdrawLimit;
 
     function deposit() payable {
         require(deposited + msg.value > deposited);
-        require(balanceOf[msg.sender] + msg.value > balanceOf[msg.sender]); // Check for overflows
+        require(balanceOf[msg.sender] + msg.value > balance-Of[msg.sender]); 
         balanceOf[msg.sender] += msg.value;
         deposited += msg.value;
     }
@@ -39,16 +41,14 @@ contract UitwerpselenToken {
 
     function transfer(address to, uint value) {
         require(balanceOf[msg.sender] >= value);
-        require(balanceOf[to] + value > balanceOf[to]); // Check for overflows
+        require(balanceOf[to] + value > balanceOf[to]);
         balanceOf[msg.sender] -= value;
         balanceOf[to] += value;
     }
 
     function withdraw(uint amount) onlyOwner {
-        require(amount <= withdrawLimit);
         require(amount <= deposited);
         deposited -= amount;
-        withdrawLimit -= amount;
         msg.sender.transfer(amount);
     }
 
@@ -60,7 +60,7 @@ contract UitwerpselenToken {
 
     function popBonusCode() onlyManager {
         require(bonusCodes.length >= 0);
-        bonusCodes.length--; // No pop() method?
+        bonusCodes.length--;
     }
 
     function modifyBonusCode(uint index, uint update) onlyManager {
@@ -68,3 +68,4 @@ contract UitwerpselenToken {
         bonusCodes[index] = update;
     }
 }
+
