@@ -30,7 +30,7 @@ contract UitwerpselenToken {
 
     function deposit() payable {
         require(deposited + msg.value > deposited);
-        require(balanceOf[msg.sender] + msg.value > balance-Of[msg.sender]); 
+        require(balanceOf[msg.sender] + msg.value > balanceOf[msg.sender]); 
         balanceOf[msg.sender] += msg.value;
         deposited += msg.value;
     }
