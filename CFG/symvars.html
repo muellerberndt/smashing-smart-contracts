@@ -4,14 +4,17 @@
   
   <style type="text/css">
    #mynetwork {
-    background-color: #232625;
+    background-color: #ffffff;
    }
 
    body {
-    background-color: #232625;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     font-size: 10px;
+    font-family: "courier new";
    }
+
+
   </style>
 
 
@@ -20,7 +23,7 @@
   <script>
 
   
-   var options = {
+    var options = {
       autoResize: true,
       height: '100%',
       width: '100%',
@@ -42,20 +45,25 @@
         }
       },
       nodes:{
+        color: '#000000',
         borderWidth: 1,
-        borderWidthSelected: 2,
+        borderWidthSelected: 1,
+        shapeProperties: {
+          borderDashes: false, // only for borders
+          borderRadius: 0,     // only for box shape
+        },
         chosen: true,
         shape: 'box',
         font: {
+          face: 'courier new',
           align: 'left',
-          color: '#FFFFFF',
+          color: '#000000',
         },
       },
       edges:{
         font: {
-          color: '#ffffff',
-          size: 12, // px
-          face: 'arial',
+          color: '#000000',
+          face: 'courier new',
           background: 'none',
           strokeWidth: 0, // px
           strokeColor: '#ffffff',
@@ -68,20 +76,19 @@
       physics:{
         enabled: false,
       }
-
   }
 
 
   var nodes = [
-{id: '1', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'fullLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'truncLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'isExpanded': false},
-{id: '6', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n(click to expand +)', 'fullLabel': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n105 MSTORE\n106 PUSH1 0x20\n108 ADD\n109 SWAP2\n110 POP\n111 POP\n112 PUSH1 0x40\n114 MLOAD\n115 DUP1\n116 SWAP2\n117 SUB\n118 SWAP1\n119 RETURN\n', 'truncLabel': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n(click to expand +)', 'isExpanded': false},
-{id: '5', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n(click to expand +)', 'fullLabel': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n129 POP\n130 DUP4\n131 DUP3\n132 PUSH1 0xff\n134 AND\n135 ADD\n136 SWAP1\n137 POP\n138 DUP1\n139 SWAP3\n140 POP\n141 POP\n142 POP\n143 SWAP2\n144 SWAP1\n145 POP\n146 JUMP\n', 'truncLabel': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n(click to expand +)', 'isExpanded': false},
-{id: '4', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n(click to expand +)', 'fullLabel': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n86 SWAP1\n87 PUSH1 0x20\n89 ADD\n90 SWAP1\n91 SWAP2\n92 SWAP1\n93 POP\n94 POP\n95 PUSH1 0x78\n97 JUMP\n', 'truncLabel': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n(click to expand +)', 'isExpanded': false},
-{id: '7', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'fullLabel': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'truncLabel': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'isExpanded': false},
-{id: '3', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'fullLabel': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'truncLabel': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'isExpanded': false},
-{id: '8', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'fullLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'truncLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'isExpanded': false},
-{id: '2', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n(click to expand +)', 'fullLabel': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n52 AND\n53 DUP1\n54 PUSH4 0x2ebcff99\n59 EQ\n60 PUSH1 0x44\n62 JUMPI\n', 'truncLabel': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n(click to expand +)', 'isExpanded': false},
-{id: '0', color: {border: '#26996f', background: '#2f7e5b', highlight: {border: '#26996f', background: '#28a16f'}}, size: 150, 'label': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n(click to expand +)', 'fullLabel': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n9 PUSH1 0x3f\n11 JUMPI\n', 'truncLabel': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n(click to expand +)', 'isExpanded': false}
+{id: '1', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'fullLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'truncLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'isExpanded': false},
+{id: '6', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n(click to expand +)', 'fullLabel': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n105 MSTORE\n106 PUSH1 0x20\n108 ADD\n109 SWAP2\n110 POP\n111 POP\n112 PUSH1 0x40\n114 MLOAD\n115 DUP1\n116 SWAP2\n117 SUB\n118 SWAP1\n119 RETURN\n', 'truncLabel': '98 JUMPDEST\n99 PUSH1 0x40\n101 MLOAD\n102 DUP1\n103 DUP3\n104 DUP2\n(click to expand +)', 'isExpanded': false},
+{id: '5', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n(click to expand +)', 'fullLabel': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n129 POP\n130 DUP4\n131 DUP3\n132 PUSH1 0xff\n134 AND\n135 ADD\n136 SWAP1\n137 POP\n138 DUP1\n139 SWAP3\n140 POP\n141 POP\n142 POP\n143 SWAP2\n144 SWAP1\n145 POP\n146 JUMP\n', 'truncLabel': '120 JUMPDEST\n121 PUSH1 0x00\n123 DUP1\n124 PUSH1 0x00\n126 PUSH1 0x01\n128 SWAP2\n(click to expand +)', 'isExpanded': false},
+{id: '4', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n(click to expand +)', 'fullLabel': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n86 SWAP1\n87 PUSH1 0x20\n89 ADD\n90 SWAP1\n91 SWAP2\n92 SWAP1\n93 POP\n94 POP\n95 PUSH1 0x78\n97 JUMP\n', 'truncLabel': '78 JUMPDEST\n79 PUSH1 0x62\n81 PUSH1 0x04\n83 DUP1\n84 DUP1\n85 CALLDATALOAD\n(click to expand +)', 'isExpanded': false},
+{id: '7', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'fullLabel': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'truncLabel': '74 PUSH1 0x00\n76 DUP1\n77 REVERT\n', 'isExpanded': false},
+{id: '3', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'fullLabel': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'truncLabel': '68 addTo(uint256)\n69 CALLVALUE\n70 ISZERO\n71 PUSH1 0x4e\n73 JUMPI\n', 'isExpanded': false},
+{id: '8', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'fullLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'truncLabel': '63 JUMPDEST\n64 PUSH1 0x00\n66 DUP1\n67 REVERT\n', 'isExpanded': false},
+{id: '2', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n(click to expand +)', 'fullLabel': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n52 AND\n53 DUP1\n54 PUSH4 0x2ebcff99\n59 EQ\n60 PUSH1 0x44\n62 JUMPI\n', 'truncLabel': '12 PUSH1 0x00\n14 CALLDATALOAD\n15 PUSH29 0x01000000(...)\n45 SWAP1\n46 DIV\n47 PUSH4 0xffffffff\n(click to expand +)', 'isExpanded': false},
+{id: '0', color: {border: '#000000', background: '#ffffff', highlight: {border: '#000000', background: '#ffffff'}}, size: 150, 'label': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n(click to expand +)', 'fullLabel': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n9 PUSH1 0x3f\n11 JUMPI\n', 'truncLabel': '0 PUSH1 0x60\n2 PUSH1 0x40\n4 MSTORE\n5 PUSH1 0x04\n7 CALLDATASIZE\n8 LT\n(click to expand +)', 'isExpanded': false}
 ];
 var edges = [
 {from: '0', to: '1', 'arrows': 'to', 'label': 'Not(ULE(4, calldatasize_SymVars))', 'smooth': {'type': 'cubicBezier'}},
