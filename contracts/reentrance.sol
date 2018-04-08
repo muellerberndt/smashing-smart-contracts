@@ -1,5 +1,11 @@
 pragma solidity ^0.4.18;
 
+/*
+This is level 10 of the Zeppelin Ethernaut challenge.
+The original code is available at:
+https://ethernaut.zeppelin.solutions/level/0xf70706db003e94cfe4b5e27ffd891d5c81b39488
+*/
+
 contract Reentrance {
 
   mapping(address => uint) public balances;
