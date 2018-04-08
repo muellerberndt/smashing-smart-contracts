@@ -11,9 +11,9 @@ Source code, tool outputs and ASCII art for the "Smashing Smart Contracts" paper
 - [WalletLibrary.sol](contracts/WalletLibrary.sol)
 - [reentrance.sol](contracts/reentrance.sol)
 
-
 ## CFGs
 
-- [symvars.sol](CFG/symvars.html)
-- [assertions.sol](CFG/assertions.html)
-- [uitwerpselentoken.sol](CFG/uitwerpselentoken.html)
+- [SymVars](https://htmlpreview.github.io/?https://github.com/b-mueller/smashing-smart-contracts/blob/master/CFG/symvars.html)
+- [Assertions](https://htmlpreview.github.io/?https://github.com/b-mueller/smashing-smart-contracts/blob/master/CFG/assertions.html)
+- [UitwerpselenToken](https://htmlpreview.github.io/?https://github.com/b-mueller/smashing-smart-contracts/blob/master/CFG/uitwerpselentoken.html)
+- [CTF](https://htmlpreview.github.io/?https://github.com/b-mueller/smashing-smart-contracts/blob/master/CFG/ctf.html)
