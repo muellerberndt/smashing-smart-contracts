@@ -7,6 +7,10 @@ Source code, tool outputs and ASCII art for the "Smashing Smart Contracts" paper
 - [symvars.sol](contracts/symvars.sol)
 - [assertions.sol](contracts/assertions.sol)
 - [uitwerpselentoken.sol](contracts/uitwerpselentoken.sol)
+- [rubixi.sol](contracts/rubixi.sol)
+- [WalletLibrary.sol](contracts/WalletLibrary.sol)
+- [reentrance.sol](contracts/reentrance.sol)
+
 
 ## CFGs
 
