@@ -1,6 +1,6 @@
 # Smashing Ethereum Smart Contracts for Fun and Real Profit
 
-Writeup, presentation and supplemental materials for the talk on smart contract security analysis at [HITBSecConf 2018](https://conference.hitb.org/hitbsecconf2018ams/).
+Writeup, presentation and supplemental materials as presented at [HITBSecConf 2018](https://conference.hitb.org/hitbsecconf2018ams/).
 
 - [Conference paper](smashing-smart-contracts-1of1.pdf)
 - [Presentation video](https://www.youtube.com/watch?v=iqf6epACgds)
