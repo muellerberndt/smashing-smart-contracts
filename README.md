@@ -1,6 +1,9 @@
 # Smashing Ethereum Smart Contracts for Fun and Real Profit
 
-A writeup about [Mythril](https://github.com/ConsenSys/mythril), a security analysis tool for Ethereum smart contracts, and its symbolic execution backend [LASER-Ethereum](https://github.com/b-mueller/laser-ethereum).
+Writeup, presentation and supplemental materials for the talk on smart contract security analysis at [HITBSecConf 2018](https://conference.hitb.org/hitbsecconf2018ams/).
+
+- [Conference paper](smashing-smart-contracts-1of1.pdf)
+- [Presentation video](https://www.youtube.com/watch?v=iqf6epACgds)
 
 ## Contracts
 
