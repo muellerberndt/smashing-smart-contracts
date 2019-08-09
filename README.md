@@ -5,9 +5,9 @@ Writeup, presentation and supplemental materials from [HITBSecConf 2018](https:/
 - [Conference paper](smashing-smart-contracts-1of1.pdf)
 - [Presentation video](https://www.youtube.com/watch?v=iqf6epACgds)
 
-And the followup writeup from [DEF CON 27](https://www.defcon.org/html/defcon-27/):
+And the followup from [DEF CON 27](https://www.defcon.org/html/defcon-27/) (with Daniel Luca):
 
-- [Conference paper (with Daniel Luca)](DEFCON27-EVM-Smart-Contracts-Mueller-Luca.pdf)
+- [Conference paper](DEFCON27-EVM-Smart-Contracts-Mueller-Luca.pdf)
 
 ## Contracts
 
