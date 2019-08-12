@@ -22,3 +22,4 @@ Conference material from [HITBSecConf 2018](https://conference.hitb.org/hitbsecc
 And the followup from [DEF CON 27](https://www.defcon.org/html/defcon-27/) (with Daniel Luca):
 
 - [Conference paper](DEFCON27-EVM-Smart-Contracts-Mueller-Luca.pdf)
+- [Presentation slides](DEFCON27_EVM_Slides_Mueller_Luca.pdf)
